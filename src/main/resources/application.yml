@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    user:
+      name: admin
+      password: password
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
